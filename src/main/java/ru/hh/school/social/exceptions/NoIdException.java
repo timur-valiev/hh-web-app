@@ -16,6 +16,11 @@ public class NoIdException extends Exception {
         this.id = id;
     }
 
+    public NoIdException(String id) {
+        super(id);
+        this.id = 0L;
+    }
+
     public Long getId() {
         return id;
     }

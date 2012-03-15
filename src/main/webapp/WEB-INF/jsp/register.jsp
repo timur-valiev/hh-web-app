@@ -1,13 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-<br>
-<a href="/">Start Page</a>
-<br>
-
-<h1>Registration</h1>
-
-<h1>${error}</h1>
+<%@ include file="publicHeader.jsp" %>
+<div class="container">
+    <div class="page-header" align="center">
+          <h3> Registration.</h3>
+    </div>
 <form:form action="/register" method="POST" modelAttribute="registerForm">
   <table>
   <tr>
@@ -24,3 +22,6 @@
   </tr>
   </table>
 </form:form>
+</div>
+</body>
+</html>

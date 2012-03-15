@@ -1,21 +1,31 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ include file="privateHeader.jsp" %>
 
-<a href="/main_page">Main Page</a>
-<a href="/logout">Logout</a>
-<br>
+<div class="container"  align="center">
+    <div class="page-header">
+        <h3> Search.</h3>
+    </div>
 
-<p>${error}</p>
-<p> ${message}</p>
-<h3> Write e-mail ou userId.</h3>
-
-<form:form action="/search" method="POST" modelAttribute="searchForm">
+<form:form action="/${action}" method="POST" modelAttribute="searchForm">
   <table>
   <tr>
-    <td><label for="query">Query:</label></td><td><form:input path="query" id="query"/></td>
+      <td><label for="name">Part of name:</label></td><td><form:input path="name" id="name"/></td>
+  </tr>
+  <tr>
+      <td><label for="mail">E-mail:</label></td><td><form:input path="mail" id="mail"/></td>
+  </tr>
+  <tr>
+      <td><label for="study">Study places:</label></td><td><form:input path="study" id="study"/></td>
+  </tr>
+  <tr>
+      <td><label for="work">Work places:</label></td><td><form:input path="work" id="work"/></td>
   </tr>
   <tr>
     <td/><td><input type="submit" value="Search"/></td>
   </tr>
   </table>
 </form:form>
+</div>
+</body>
+</html>

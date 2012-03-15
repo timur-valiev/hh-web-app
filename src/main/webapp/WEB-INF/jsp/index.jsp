@@ -1,8 +1,6 @@
-<html>
-<body>
-<h2>Welcome to My Social Network</h2>
-<br>
-<a href="/register">Register</a>
-<a href="/login">Login</a>
-</body>
+<%@ include file="publicHeader.jsp" %>
+    <div class="page-header" align="center">
+          <h3> Welcome to my social network!</h3>
+    </div>
+    </body>
 </html>

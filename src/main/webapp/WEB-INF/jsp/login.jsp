@@ -1,14 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
-<br>
-<a href="/">Start Page</a>
-<br>
-<p>${error}</p>
-<p> ${message}</p>
-<p> ${counter}</p>
-<h3> Please log in.</h3>
+<%@ include file="publicHeader.jsp" %>
 
+<div class="container">
+    <div class="page-header" align="center">
+          <h3> Please log in.</h3>
+    </div>
 <form:form action="/login" method="POST" modelAttribute="loginForm">
   <table>
   <tr>
@@ -22,3 +20,6 @@
   </tr>
   </table>
 </form:form>
+</div>
+</body>
+</html>
